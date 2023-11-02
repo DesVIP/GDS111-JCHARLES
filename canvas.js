@@ -1,7 +1,21 @@
 var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 var c = canvas.getContext('2d');
-c.fillRect(100, 100, 100, 100);
-c.fillRect(400, 100, 100, 100);
+c.fillRect(400, 500, 100, 100);
+c.fillRect(400, 600, 100, 200);
+c.fillRect(400, 400, 100, 100);
+c.fillRect(400, 800, 100, 100);
 c.fillRect(300, 300, 100, 100);
+c.fillRect(200, 200, 100, 100);
+c.fillRect(500, 300, 100, 100);
+c.fillRect(600, 200, 100, 100);
+c.fillRect(300, 600, 100, 100);
+c.fillRect(200, 600, 100, 100);
+c.fillRect(100, 500, 100, 100);
+c.fillRect(0, 400, 100, 100);
+c.fillRect(500, 600, 100, 100);
+c.fillRect(600, 600, 100, 100);
+c.fillRect(700, 500, 100, 100);
+c.fillRect(800, 400, 100, 100);
