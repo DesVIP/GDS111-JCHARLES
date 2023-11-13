@@ -1,17 +1,12 @@
-console.log("Red Team");
-console.log("        ");
+var coupons = 0;
+remainingCoupons = coupons % 4;
 
-var w = 0;
-var c = 0;
-var o = 0;
-var e = 0;
 
-w = prompt("Enter the Weapon Control value: ");
-c = prompt("Enter the Captures value: ");
-o = prompt("Enter the Ownages value: ");
-e = prompt("Enter the Effieciency value: ");
+coupons = prompt("Candy calculator. Enter number of coupons to redeem: ");
+console.log("Candy calculator. Enter number of coupons to redeem:");
+console.log(coupons);
 
-console.log("Weapon Control: " + w + "%");
-console.log("Captures: " + c + "%");
-console.log("Ownages: " + o + "%");
-console.log("Efficiency: " + e + "%");
+
+
+ 
+console.log("Our " + coupons + " coupons can be redeemed for " + Math.floor(1.5) + " candy bars and " + Math.floor(1.5) + " gumballs with " + remainingCoupons + " coupons leftover.")
