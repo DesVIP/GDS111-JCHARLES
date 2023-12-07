@@ -44,6 +44,7 @@ do {
 
 function changeActions() {
   console.log("I'm inside Change Actions funtion.");
+ 
 }
 
 function buttonLayout() {
