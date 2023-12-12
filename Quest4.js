@@ -1,8 +1,11 @@
 var age = 0;
-age = prompt("If entered age is:")
+age = prompt("If entered age is: ")
 
-let a = 17;
-let b = 18;
-let c = 65;
-let d = 40;
-let e = 70;
+
+if (age < 18) {
+    console.log("Minor")
+} else if(age >= 65) {
+    console.log("Senior")
+} else {
+    console.log("Neither")
+}
