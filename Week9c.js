@@ -88,4 +88,72 @@ function mainScript() {
 
         if (ttt[0][0]==symbol && ttt[0][1]==symbol && ttt[0][2]==symbol)
         win = true;
+
+        if (ttt[1][0]==symbol && ttt[1][1]==symbol && ttt[1][2]==symbol)
+        win = true;
+
+        if (ttt[2][0]==symbol && ttt[2][1]==symbol && ttt[2][2]==symbol)
+        win = true;
+
+        if (ttt[0][0]==symbol && ttt[1][0]==symbol && ttt[2][0]==symbol)
+        win = true;
+
+        if (ttt[0][1]==symbol && ttt[1][1]==symbol && ttt[2][1]==symbol)
+        win = true;
+
+        if (ttt[0][2]==symbol && ttt[1][2]==symbol && ttt[2][2]==symbol)
+        win = true;
+
+        if (ttt[0][0]==symbol && ttt[1][1]==symbol && ttt[2][2]==symbol)
+        win = true;
+
+        if (ttt[0][2]==symbol && ttt[1][1]==symbol && ttt[2][0]==symbol)
+        win = true;
+
+        if (win) {
+            return symbol;
+        } else {
+            return "?";
+        }
     }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max) + 1;
+    }
+
+    let choice = 0;
+    let winnerSymbol = "";
+    let hasWon = false;
+    do {
+        instructions();
+
+        choice = Number(prompt("Enter a number of your choice:"));
+        placeChoice(choice, "X");
+        console.log("Human's Move:");
+        displayBoard();
+        winnerSymbol = someoneWon("X");
+        if (winnerSymbol == "X") {
+            console.log("Congratulations, you win!");
+            break;
+        } else if (winnerSymbol == "O") {
+            console.log("Sorry, you lost.");
+            break;
+        }
+
+        let succeed = false
+        do {
+            choice = getRandomInt(9);
+            succeed = placeChoice(choice, "O");
+        } while (!succeed);
+        console.log("PC's Move:");
+        displayBoard();
+        winnerSymbol = someoneWon("O");
+        if (winnerSymbol == "O") {
+            console.log("Sorry, you lost.");
+            break;
+        } else if (winnerSymbol == "X") {
+            console.log("Congratulations, you win!");
+            break;
+        }
+    } while (hasWon = false)
+}
